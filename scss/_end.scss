@@ -1,0 +1,45 @@
+.end {
+
+    &__container {
+        padding: clamp(1rem, 5vw, 4rem);
+        padding-bottom: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    &__title {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        color: $VeryDarkCyan;
+        font-size: clamp(1.5rem, 5vw, 1.6rem);
+    }
+
+    &__link {
+        text-decoration: none;
+        background-color: $Pink;
+        color: $VeryPaleBlue;
+        border-radius: 1.5rem;
+        padding: 0.8rem 2.2rem;
+        font-size: clamp(0.85rem, 5vw, 1rem);
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 10px rgb(211, 211, 211);
+        transition: background-color 500ms;
+
+        &:hover {
+            background-color: $LightPink;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .end {
+        &__container {
+            padding-bottom: 4rem;
+        }
+    }
+}

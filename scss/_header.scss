@@ -1,0 +1,31 @@
+.header {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: clamp(1rem, 4vw, 3rem);
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    &__logo {
+        width: clamp(100px, 100%, 130px);
+        height: 100%;
+    }
+
+    &__link {
+        text-decoration: none;
+        border: 1px solid $Pink;
+        border-radius: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.8rem;
+        color: $Pink;
+        transition: color 500ms, border-color 500ms;
+
+        &:hover {
+            color: $LightPink;
+            border-color: $LightPink;
+        }
+    }
+}

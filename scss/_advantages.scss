@@ -1,0 +1,106 @@
+.bg_section_top_1 {
+    width: 100%;
+    display: block;
+}
+
+.advantages {
+
+    &__container:nth-of-type(odd) {
+        background-color: #F6FBFF;
+    }
+
+    &__advantage {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        max-width: 1440px;
+        margin: auto;
+        padding: 4rem clamp(1rem, 5vw, 4rem);
+
+        &--flowing_conversations {
+            padding: 6rem clamp(1rem, 5vw, 4rem);
+        }
+    }
+
+    .bg_section_bottom_1 {
+        display: block;
+        width: 100%;
+    }
+
+    .bg_section_top_2 {
+        display: block;
+        width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        margin-bottom: 5rem;
+        display: block;
+    }
+
+    &__title {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        margin: 0.6rem 0;
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+    }
+
+    &__text {
+        text-align: center;
+    }
+}
+
+.bg_section_bottom_2 {
+    width: 100%;
+    display: block;
+}
+
+@media (min-width: 1024px) {
+
+    .bg_section_top_1 {
+        content: url(../images/bg-section-top-desktop-1.svg);
+    }
+
+    .advantages {
+        &__advantage {
+            padding: 3rem clamp(1rem, 5vw, 4rem);
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5rem;
+
+            &--grow_together, &--your_users {
+                .advantages__container_text {
+                    order: 1;
+                }
+
+                .advantages__container_image {
+                    order: 2;
+                }
+            }
+        }
+
+        .bg_section_bottom_1 {
+            content: url(../images/bg-section-bottom-desktop-1.svg);
+        }
+    
+        .bg_section_top_2 {
+            content: url(../images/bg-section-top-desktop-2.svg);
+        }
+
+        &__image {
+            margin-bottom: 0;
+        }
+
+        &__title {
+            text-align: left;
+        }
+    
+        &__text {
+            text-align: left;
+        }
+    }
+
+    .bg_section_bottom_2 {
+        content: url(../images/bg-section-bottom-desktop-2.svg);
+    }
+}

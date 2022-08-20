@@ -1,0 +1,238 @@
+.bg_footer_top {
+    display: block;
+    width: 100%;
+}
+
+.footer {
+    background-color: $VeryDarkCyan;
+
+    &__container {
+        padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 6vw, 5rem);
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        color: $VeryPaleBlue;
+        margin-bottom: 4rem;
+
+        &__title {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        &__text {
+            font-size: 0.85rem;
+            line-height: 1.3rem;
+            max-width: 350px;
+        }
+
+        &__form {
+            padding: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label {
+                display: none;
+            }
+        }
+
+        &__label {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &__input {
+            border-radius: 0.5rem;
+            padding: 0.8rem;
+            border: none;
+            outline: none;
+            border: 1px solid #fff;
+            transition: border-color 500ms;
+
+            &:focus {
+                border-color: $LightPink;
+            }
+        }
+
+        &__submit {
+            background-color: $Pink;
+            color: $VeryPaleBlue;
+            border: none;
+            border-radius: 0.2rem;
+            padding: 0.8rem 2rem;
+            align-self: flex-end;
+            transition: background-color 500ms;
+
+            &:hover {
+                background-color: $LightPink;
+            }
+
+            &_container {
+                text-align: right;
+            }
+        }
+    }
+
+    .message {
+        color: $LightRed;
+        font-size: 0.85rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: 500ms;
+    }
+
+    .message.visible {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .contact {
+        color: $VeryPaleBlue;
+
+        &__logo {
+            background-color: white;
+            width: 180px;
+            height: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        &__text {
+            font-size: 0.85rem;
+            line-height: 1.3rem;
+            max-width: 320px;
+        }
+
+        .contact_information {
+            margin: 2rem 0;
+
+            &__type {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+            }
+
+            &__icon {
+                width: 20px;
+            }
+
+            &__text {
+                font-size: 0.85rem;
+            }
+        }
+
+        .social_media {
+            display: flex;
+            gap: 1rem;
+            
+            &__item {
+                background-color: $VeryPaleBlue;
+                color: $VeryDarkCyan;
+                width: 25px;
+                aspect-ratio: 1 / 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.1rem;
+
+                .fa-brands {
+                    line-height: 0;
+                }
+
+                .fa-instagram {
+                    font-size: 1.6rem;
+                }
+
+                &--facebook {
+                    transition: background-color 500ms, color 500ms;
+
+                    &:hover {
+                        background-color: #0D8AF0;
+                        color: #fff;
+                    }
+                }
+
+                &--instagram {
+                    background-color: transparent;
+                    color: $VeryPaleBlue;
+                    transition: 500ms;
+
+                    // &:hover {
+                    //     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                    //     background-clip: text;
+                    //     color: transparent;
+                    // }
+                }
+
+                &--twitter {
+                    transition: background-color 500ms, color 500ms;
+
+                    &:hover {
+                        background-color: #1D9BF0;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    background-color: $VeryDarkCyan;
+    padding: clamp(1rem, 3vw, 2rem);
+    text-align: center;
+
+    &__text {
+        font-size: 11px;
+        color: $VeryPaleBlue;
+        margin: 0;
+    }
+
+    &__link {
+        color: $Pink;
+        transition: color 500ms;
+
+        &:hover {
+            color: $LightPink;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .bg_footer_top {
+        content: url(../images/bg-footer-top-desktop.svg);
+    }
+
+    .footer {
+
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: flex-end;
+            align-items: flex-start;
+        }
+
+        .newsletter {
+            order: 2;
+            margin: 0;
+
+            &__form {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            &__input {
+                width: 290px;
+            }
+        }
+
+        .contact {
+            justify-self: flex-start;
+            order: 1;
+        }
+    }
+}
