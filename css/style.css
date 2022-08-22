@@ -276,7 +276,8 @@ body {
   gap: 0.5rem;
 }
 .footer .newsletter__form label {
-  display: none;
+  visibility: hidden;
+  position: absolute;
 }
 .footer .newsletter__label {
   display: flex;
