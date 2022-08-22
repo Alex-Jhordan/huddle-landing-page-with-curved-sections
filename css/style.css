@@ -275,10 +275,6 @@ body {
   flex-direction: column;
   gap: 0.5rem;
 }
-.footer .newsletter__form label {
-  visibility: hidden;
-  position: absolute;
-}
 .footer .newsletter__label {
   display: flex;
   flex-direction: column;
