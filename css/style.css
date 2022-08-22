@@ -275,6 +275,10 @@ body {
   flex-direction: column;
   gap: 0.5rem;
 }
+.footer .newsletter__form label {
+  position: absolute;
+  opacity: 0;
+}
 .footer .newsletter__label {
   display: flex;
   flex-direction: column;
